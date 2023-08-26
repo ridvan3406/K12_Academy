@@ -9,7 +9,7 @@ trigger UniqueClassName on Class__c (before insert) {
     // Check for duplicates 
     for (Class__c newCls : Trigger.new) {
         if (existingClassNames.contains(newCls.Name)) {
-            newCls.addError('A class with this name already exists!!!');
+            newCls.addError('A class with this name already exists!!!!');
         }
     }
 }
